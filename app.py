@@ -38,7 +38,7 @@ if menu == "لوحة المخزون":
         if submitted and new_name:
             new_row = pd.DataFrame([{"المعدة": new_name, "النوع": new_type, "الحالة": "متاح", "السعر اليومي ($)": new_price}])
             st.session_state.inventory = pd.concat([st.session_state.inventory, new_row], ignore_index=True)
-            st.success(تمت إضافة {new_name} بنجاح!)
+            st.success(f"تمت إضافة {new_name} بنجاح!")
             st.rerun()
 
 elif menu == "حجز ذكي (AI Parser)":
